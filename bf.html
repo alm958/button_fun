@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Button Fun</title>
+        <link rel="stylesheet" type="text/css" href="bf.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // $("button").hover(function(){
+                //     $("button").toggleClass("green");
+                // });
+                $('body').on('click','button',function(){
+                    $("button").toggleClass("red");
+                });
+                $('body').on('hover','button',function(){
+                    $("button").toggleClass("green");
+                });
+                $(document).keypress(function(e) {
+                    if(e.which == 13) {
+                        $('body').append(`<button type="button" name="mybutton">My Button</button>`)
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button id='mybutton' type="button" name="mybutton">My Button</button>
+    </body>
+</html>
