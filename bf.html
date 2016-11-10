@@ -10,21 +10,33 @@
                 // $("button").hover(function(){
                 //     $("button").toggleClass("green");
                 // });
-                $('body').on('click','button',function(){
-                    $("button").toggleClass("red");
+                $('body').on('click','#b1',function(){
+                    $('#b1').toggleClass("red");
                 });
-                $('body').on('hover','button',function(){
-                    $("button").toggleClass("green");
+                $('body').on('mouseover','#b1',function(){
+                    $('#b1').toggleClass("green");
+                });
+                $('body').on('mouseleave','#b1',function(){
+                    $('#b1').toggleClass("green");
+                });
+                $('body').on('click','#b2',function(){
+                    $('#b2').toggleClass("red");
+                });
+                $('body').on('mouseover','#b2',function(){
+                    $('#b2').toggleClass("green");
+                });
+                $('body').on('mouseleave','#b2',function(){
+                    $('#b2').toggleClass("green");
                 });
                 $(document).keypress(function(e) {
                     if(e.which == 13) {
-                        $('body').append(`<button type="button" name="mybutton">My Button</button>`)
+                        $('body').append(`<button id='b2' type="button" name="mybutton">My Button</button>`)
                     }
                 });
             });
         </script>
     </head>
     <body>
-        <button id='mybutton' type="button" name="mybutton">My Button</button>
+        <button id='b1' type="button" name="mybutton">My Button</button>
     </body>
 </html>
